@@ -1,0 +1,34 @@
+DOCTYPE html>
+<html>
+<head>
+  <title>Color Toggler</title>
+</head>
+<body>
+  <h1>Color Toggler</h1>
+  <button id="toggleButton">Toggle Color</button>
+
+  <script>
+    let isDarkMode = false; 
+
+    function toggleColor() {
+      const body = document.body;
+      const button = document.getElementById('toggleButton');
+
+      if (isDarkMode) {
+        body.style.backgroundColor = 'blue';
+        body.style.color = 'red';
+        button.textContent = 'Switch to Dark Mode';
+      } else {
+        body.style.backgroundColor = 'red';
+        body.style.color = 'blue';
+        button.textContent = 'Switch to Light Mode';
+      }
+
+      isDarkMode = !isDarkMode; 
+    }
+
+    const toggleButton = document.getElementById('toggleButton');
+    toggleButton.addEventListener('click', toggleColor);
+  </script>
+</body>
+</html>
